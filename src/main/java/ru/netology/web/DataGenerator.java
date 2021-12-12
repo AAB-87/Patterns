@@ -22,4 +22,6 @@ class DataGenerator {
         return faker.phoneNumber().phoneNumber();
     }
 
+
+    fff
 }
