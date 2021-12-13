@@ -1,15 +1,17 @@
 package ru.netology.web;
 
 import com.github.javafaker.Faker;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 
 class DataGenerator {
+
     public static final Faker faker = new Faker(new Locale("ru"));
 
-    private static String generateCity() {
+    public static String generateCity() {
         return faker.address().city();
     }
     public static String generateDate() {
@@ -22,6 +24,4 @@ class DataGenerator {
         return faker.phoneNumber().phoneNumber();
     }
 
-
-    fff
 }
