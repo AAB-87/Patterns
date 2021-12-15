@@ -3,20 +3,18 @@ package ru.netology.web;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 import java.time.Duration;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
+import static ru.netology.web.DataGenerator.generateDate;
 
 public class ChromeTest {
 
     @Test
     public void shouldBeAppointmentMeeting() {
 
-        String ld = LocalDate.now().plusDays(3).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
-        String ld1 = LocalDate.now().plusDays(5).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
+        String ld = generateDate(3);
+        String ld1 = generateDate(5);
 
         open("http://localhost:9999"); // открываем страницу
         $("[data-test-id = 'city'] input").setValue(DataGenerator.generateCity()); // находим элемент (поле "Город") и генерируем туда текст
