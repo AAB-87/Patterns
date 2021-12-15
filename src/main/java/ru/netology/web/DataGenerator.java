@@ -8,6 +8,7 @@ import java.util.Locale;
 
 
 class DataGenerator {
+    private DataGenerator() {}
 
     public static final Faker faker = new Faker(new Locale("ru"));
 
